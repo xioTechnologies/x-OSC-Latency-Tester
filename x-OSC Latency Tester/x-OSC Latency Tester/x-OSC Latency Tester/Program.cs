@@ -51,7 +51,7 @@ namespace x_OSC_Latency_Tester
                     if (oscReceiver.State == OscSocketState.Connected)
                     {
                         OscPacket packet = oscReceiver.Receive();
-                        if (oscNamespaceManager.ShouldInvoke(packet) == oscNamespaceManager.ShouldInvoke(packet))
+                        if (oscNamespaceManager.ShouldInvoke(packet) == OscPacketInvokeAction.Invoke)
                         {
                             oscNamespaceManager.Invoke(packet);
                         }
